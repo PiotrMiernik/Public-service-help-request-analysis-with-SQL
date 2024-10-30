@@ -17,7 +17,7 @@ Frequency distribution of priority categories:
 
 NONE	30081
 MEDIUM	5745
-LOW		517
+LOW	517
 HIGH	88
 
 About 83 % of requests do not have a priority assigned. Data quality personnel should investigate why the percentage of 'NONE' priorities is so high
@@ -34,11 +34,11 @@ order by count(*) desc;
 Frequency distribution of source categories:
 
 gov.publicstuff.com	30985
-Iframe				3670
-iOS					1199
-Android				444
+Iframe			3670
+iOS			1199
+Android			444
 Iframe (Staff)		83
-iOS (Staff)			40
+iOS (Staff)		40
 Android (Staff)		9
 Legacy API 2.1		1
 
@@ -67,10 +67,10 @@ order by count(*) desc;
 New variable looks like tis now: 
 
 gov.publicstuff.com	30985
-Iframe				3670
-iOS					1199
-Android				444
-other				133
+Iframe			3670
+iOS			1199
+Android			444
+other			133
 */
 
 select
