@@ -1,1 +1,21 @@
-# Public-service-help-request-analysis-with-SQL
+- About the Dataset:
+  - Data source: datacamp.com
+  - Database: PostgreSQL with one table
+  - Database manager: DBeaver
+  - Data origin: Public service help requests from city of Evanston (Illinois, USA)
+  - The table consists of 10 columns:
+      - id: A unique identifier assigned to each record. (int4)
+      - priority: Indicates the urgency or importance of the request. (varchar50)
+      - source: Specifies the system where the data was initially recorded. (varchar50)
+      - category: Categorizes the record based on the type of the help request. (varchar64)
+      - date_created: Records the date and time when the record was first created. (timestamp)
+      - date_completed: Records the date and time when the task associated with the record was completed. (timestamp)
+      - street: Specifies the street name associated with the help request. (varchar50)
+      - house_num: Specifies the house number associated with the help request. (varchar50)
+      - zip: Specifies the zip code associated with the help request. (varchar50)
+      - description: Provides a textual description of the request, offering additional context or details. (text)
+- When analyzing the described dataset, I focused on three main areas:
+    - Data quality and scope within the table - given that most columns contain textual and categorical variables, and the data is entered by various individuals, I aimed to assess data quality (errors, consistency, and missing values) and determine whether the         
+      description of each ticket contains valuable information that could impact service quality.
+    - Analysis of help requests and response in time - this included examining average ticket resolution time (ART KPI), how average resolution time depends on ticket type and priority, and identifying any trends or seasonality (daily, weekly, or annual) in ticket volumes.
+    - Analysis of help requests and responses by city area - this involved determining the number of tickets originating from different areas of the city, identifying areas with the highest and lowest ticket volumes, analyzing the dominant types and priorities of tickets        in different areas, and determining which areas have the longest and shortest ticket resolution times. Additionally, I examined the sources of tickets used by residents in each area of the city.
