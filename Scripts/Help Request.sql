@@ -1,4 +1,4 @@
--- First let's check what's in the database and check data quality.
+-- First let's investigate what's in the dataset and check data quality.
 -- Duplicates and missing data were checked before.
 
 select count(*)
@@ -83,7 +83,7 @@ order by count(*) desc;
 
 /*
 There are 149 request categories in the dataset. Only 8 of them have more then 1000 requests and 88 of them have less then 100 requests.
-Another column with main categories should be created. The categories in this new variable ought to align with the key urban concerns of residents, including: 
+Additional column with main categories should be created. The categories in this new variable should align with the key urban concerns of residents, including: 
 urban greenery, animals, waste management, transportation, law&order and utilities.
 */
 
@@ -246,17 +246,10 @@ rare			19
 law&order		15
 utilities		10 
 Total			533
- */
+*/
 
 /* 
 Now that we have examined the table's contents, assessed data quality, and created new variables, 
 we can turn our attention to the tickets and their timely resolution.
- */
-
-
-
-
-
-
-	
+*/
 
