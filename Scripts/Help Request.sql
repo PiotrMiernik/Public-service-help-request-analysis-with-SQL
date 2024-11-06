@@ -45,7 +45,7 @@ order by count(*) desc;
 Frequency distribution of priority categories:
 NONE	30081
 MEDIUM	5745
-LOW		517
+LOW	517
 HIGH	88
 About 83 % of requests do not have a priority assigned. Data quality personnel should investigate why the percentage of 'NONE' priorities is so high
 */
@@ -60,11 +60,11 @@ order by count(*) desc;
 /*
 Frequency distribution of source categories:
 gov.publicstuff.com	30985
-Iframe				3670
-iOS					1199
-Android				444
+Iframe			3670
+iOS			1199
+Android			444
 Iframe (Staff)		83
-iOS (Staff)			40
+iOS (Staff)		40
 Android (Staff)		9
 Legacy API 2.1		1
 About 84 % of requests were submitted via 'gov.publicstaff.com' system. 
@@ -91,10 +91,10 @@ order by count(*) desc;
 /*
 New variable looks like this now: 
 gov.publicstuff.com	30985
-Iframe				3670
-iOS					1199
-Android				444
-other				133
+Iframe			3670
+iOS			1199
+Android			444
+other			133
 */
 
 select
@@ -174,12 +174,12 @@ order by count(*) desc;
 After recoding category variable into main_category we have 8 categories with following frequencies:
 waste management	7845
 transportation		7689
-other				6808
+other			6808
 urban greenery		5127
-utilities			5105
-animals				3038
-law&order			638
-rare				181 
+utilities		5105
+animals			3038
+law&order		638
+rare			181 
  */
 
 select
@@ -274,7 +274,7 @@ order by count(*) desc;
 The main category classification system requires improvement.
 other			358
 animals			105
-urban greenery	26
+urban greenery		26
 rare			19
 law&order		15
 utilities		10 
@@ -340,13 +340,13 @@ order by median_trt_kpi desc;
 /*
 Descriptive statistics for ticket resolution time group by main category (min., max., median):
 waste management	00:01:09	285 days 20:42:10	3 days 20:55:45
-rare				00:01:04	111 days 05:54:36	2 days 22:34:09.5
+rare			00:01:04	111 days 05:54:36	2 days 22:34:09.5
 urban greenery		00:01:01	381 days 17:08:10	2 days 18:04:12.5
-other				00:00:32	800 days 06:16:59	2 days 05:33:53.5
-animals				00:00:26	411 days 04:40:06	2 days 01:15:31
+other			00:00:32	800 days 06:16:59	2 days 05:33:53.5
+animals			00:00:26	411 days 04:40:06	2 days 01:15:31
 transportation		00:00:07	888 days 03:18:12	23:45:00.5
-law&order			00:01:09	32 days 22:16:23	21:30:01.5
-utilities			00:00:38	944 days 20:09:03	18:31:11.5
+law&order		00:01:09	32 days 22:16:23	21:30:01.5
+utilities		00:00:38	944 days 20:09:03	18:31:11.5
  */
 
 select
@@ -360,7 +360,7 @@ order by median_trt_kpi desc;
 
 /*
 Descriptive statistics for ticket resolution time group by priority(min., max., median):
-LOW		00:03:10	285 days 20:42:10	3 days 02:40:06
+LOW	00:03:10	285 days 20:42:10	3 days 02:40:06
 MEDIUM	00:00:42	402 days 22:20:27	2 days 20:10:28
 NONE	00:00:07	944 days 20:09:03	1 day 13:42:38
 HIGH	00:16:21	734 days 23:18:20	20:28:38
@@ -378,10 +378,10 @@ order by median_trt_kpi desc;
 
 /*
 Descriptive statistics for ticket resolution time group by source category(min., max., median):
-Android	00:02:09	271 days 04:09:20	2 days 20:24:05.
-Iframe	00:00:42	402 days 22:20:27	2 days 16:05:21
-iOS		00:03:34	264 days 21:38:24	2 days 12:19:36
-other	00:41:24	96 days 21:22:13	2 days 02:13:55
+Android			00:02:09	271 days 04:09:20	2 days 20:24:05.
+Iframe			00:00:42	402 days 22:20:27	2 days 16:05:21
+iOS			00:03:34	264 days 21:38:24	2 days 12:19:36
+other			00:41:24	96 days 21:22:13	2 days 02:13:55
 gov.publicstuff.com	00:00:07	944 days 20:09:03	1 day 15:59:05.5
  */
 
@@ -410,10 +410,10 @@ order by date_part('year', ed.date_created);
 
 /*
 I cut off outliers (min./max. 1 % of trt_kpi) and the results are:
-year	median			98% mean				num_of_tickets
-2016	2 days 00:32:21	5 days 31:30:02.858766	13290
-2017	1 day 06:33:01	4 days 29:12:26.5871	15907
-2018	1 day 19:01:11	5 days 23:11:36.927855	6487 
+year	median			98% mean			num_of_tickets
+2016	2 days 00:32:21		5 days 31:30:02.858766		13290
+2017	1 day 06:33:01		4 days 29:12:26.5871		15907
+2018	1 day 19:01:11		5 days 23:11:36.927855		6487 
  */
 
 select
@@ -453,7 +453,7 @@ order by date_part('year', ed.date_created), date_part('month', ed.date_created)
 /*
 I grouped median trt_kpi and number of tickets by year and month (cross tabulation).
 But to spot eventual trends, it would be better to create line plot based on this agregated data points.
-year 	month	median				num_of_tickets
+year 	month		median			num_of_tickets
 2016.0	1.0		2 days 02:42:26		728
 2016.0	2.0		1 day 21:15:17		892
 2016.0	3.0		3 days 06:54:29		1102
@@ -463,9 +463,9 @@ year 	month	median				num_of_tickets
 2016.0	7.0		2 days 02:52:38		1287
 2016.0	8.0		1 day 14:41:15		1443
 2016.0	9.0		1 day 21:55:10		1420
-2016.0	10.0	1 day 22:50:45		1110
-2016.0	11.0	1 day 23:06:21		1062
-2016.0	12.0	1 day 08:14:03		911
+2016.0	10.0		1 day 22:50:45		1110
+2016.0	11.0		1 day 23:06:21		1062
+2016.0	12.0		1 day 08:14:03		911
 2016.0			2 days 00:45:23		13616
 2017.0	1.0		1 day 06:37:35		1082
 2017.0	2.0		1 day 06:50:24		883
@@ -476,9 +476,9 @@ year 	month	median				num_of_tickets
 2017.0	7.0		1 day 15:34:17		1773
 2017.0	8.0		1 day 07:43:42		1655
 2017.0	9.0		1 day 04:29:38		1333
-2017.0	10.0	1 day 05:00:32		1284
-2017.0	11.0	1 day 06:39:12		1220
-2017.0	12.0	1 day 12:37:32		1088
+2017.0	10.0		1 day 05:00:32		1284
+2017.0	11.0		1 day 06:39:12		1220
+2017.0	12.0		1 day 12:37:32		1088
 2017.0			1 day 06:38:25		16186
 2018.0	1.0		1 day 04:56:59		1028
 2018.0	2.0		1 day 02:44:54		855
@@ -499,7 +499,7 @@ order by median_trt_kpi desc;
  
 /*
 Median trt_kpi and number of tickets group by day of the week:
-DOW	   		median (descending)	num_of_tickets
+DOW	   	median (descending)	num_of_tickets
 friday   	3 days 02:53:49		6107
 saturday 	2 days 07:48:46		2022
 sunday   	2 days 01:36:16		635
@@ -510,7 +510,7 @@ wednesday	1 day 02:20:56		6799
  */
 
 select
-	to_char(ed.date_created, 'HH24') as day_of_week,
+	to_char(ed.date_created, 'HH24') as hour,
 	percentile_cont(0.50) within group (order by ed.trt_kpi) as median_trt_kpi,
 	count(*) as num_of_tickets
 from evanston_data ed 
@@ -519,7 +519,7 @@ order by to_char(ed.date_created, 'HH24');
 
 /*
 Median trt_kpi and number of tickets group by hour of creation:
-HH24	median
+hour		median			num_of_tickets
 00		2 days 10:38:29		169
 01		1 day 15:44:37		88
 02		2 days 11:04:17		47
@@ -594,10 +594,10 @@ order by num_of_tickets desc;
 
 /*
 Number of tickets for recoded zip areas:
-zip		Num_of_tickets
+zip	Num_of_tickets
 60201	19050
 60202	11162
-NA		5505
+NA	5505
 other	427
 60208	255
  */
@@ -612,12 +612,12 @@ group by ed.zip_new;
 
 /*
 Top priority (without NONE category) and top category for recoded zip areas:
-zip		top_priority	top_category
-60201	MEDIUM			waste management
-NA		MEDIUM			waste management
-other	MEDIUM			utilities
-60208	MEDIUM			waste management
-60202	MEDIUM			waste management 
+zip	top_priority	top_category
+60201	MEDIUM		waste management
+NA	MEDIUM		waste management
+other	MEDIUM		utilities
+60208	MEDIUM		waste management
+60202	MEDIUM		waste management 
  */
 
 select
@@ -632,7 +632,7 @@ Median trt_kpi (tisket resolution time) for receded zip areas:
 zip		median_trt_kpi (descending)
 60202		2 days 01:14:07
 60208		1 day 23:05:24
-NA			1 day 17:38:29
+NA		1 day 17:38:29
 60201		1 day 13:33:03
 other		1 day 02:30:30
  */
@@ -646,9 +646,9 @@ order by top_source desc;
 
 /*
 Top source for recoded zip areas:
-zip		top_source
+zip	top_source
 60201	other
-NA		other
+NA	other
 60202	other
 other	iOS
 60208	iOS
